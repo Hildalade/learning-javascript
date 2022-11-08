@@ -7,8 +7,8 @@
 
 //Context.fillstyle= "purple";
 //context.fillreact(50,0,25,25);
-//ctx.fillstyle = "red";
-//let context.fillstyle= canvas.getcontex("2d");
+ctx.fillstyle = "red";
+let context.fillstyle= canvas.getcontex("2d");
 let squares ={};
 
 Drawsqaure(0,0 "yellow")
