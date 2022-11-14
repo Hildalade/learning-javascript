@@ -30,27 +30,27 @@
 	this variable will have a data type of "undefined" since it has not been
 	assigned a value of any kind.
 */
-let x =// 
+let x; 
 /* TASK #2
     Create a variable named age and set it's value to your age in years. Once 
 	created, this variable will will have a data type of "number"
 */
 
- let age : 13//
+let age = 13;
 
 /* TASK #3
 	Create a variable named myName and set it's value to your name. Once 
 	created, this variable will will have a data type of "string"
 */
 
- let myname = Heidi// 
+let myname = "Heidi"; 
 
 /* TASK #4
 	Create a variable named isCodingFun and set it's value to true Once created, 
 	this variable will will have a data type of "boolean"
 */
 
-let isCodingFun= true// 
+let isCodingFun= true; 
 
 /* TASK #5
 	Create a new variable called nameCopy and assign it to the myName variable 
@@ -58,7 +58,7 @@ let isCodingFun= true//
 	myName above, this variable's value also changes.
 /*
 
-let namecopy = myname//
+let namecopy = myname;
 
 /* ****************************************************************************
    ***           DO NOT MODIFY ANYTHING AFTER THIS SECTION                  ***
