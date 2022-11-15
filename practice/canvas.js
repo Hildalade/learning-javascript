@@ -10,7 +10,7 @@ let context = canvas.getContext("2d");
 
 
 class ClickBox {
-	constructor(x, y, size, colors) {
+	constructor(x, y, colors, size) {
 		this.x = x;
 		this.y = y;
 		this.size = size;
@@ -25,11 +25,8 @@ class ClickBox {
 	}
 
 	setColor() {
-  
- let x= column * size 
- let y= row * size 
- let box = new ClickBox()
- squares.push(box);
+    let colorindex = Math.floor (Math.random() * this.colors.length)
+ 
 }
 
 	update(timeElapsed) {
@@ -40,14 +37,15 @@ class ClickBox {
     this.lastRefresh = 0;
     this.setColor();
 		}
-	}
+	
 
-	Draw() {
+	draw() {
     //let square = new path2d();
     //square.rect(x,y,size,size);
     context.fillStyle = this.color;
-    context.fillRect(this.y,this.x, this.size,this.size)
+    context.fillRect(this.y,this.x, this.size,this.size);
   }
+}
 
 
 let squares = [];
@@ -70,7 +68,7 @@ function drawLoop(timestamp) {
 	let elapsedTime = timestamp - currentTime;
 	currentTime = timestamp;
 
-  squares.foreach((b) =>){
+  squares.forEach((b) =>{
     b.update(elapsedTime);
     b.draw();
   });
