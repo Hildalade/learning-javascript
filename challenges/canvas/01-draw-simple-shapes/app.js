@@ -26,10 +26,9 @@ const context = canvas.getContext("2d");
 
 	You can start by placing your rectangle at x = 0 and y = 0 so you are sure 
 	to see it on the canvas.  The default fill style is black.
-*/
+*  //context.fillRect and let intellisense help you//
 
-// Add some code here by typing context.fillRect and let intellisense help you
-// to complete the statement. 
+context.fillrect(0,0,50,100);
 
 /* 
 	This should draw a black rectangle on the canvas at the x and y coordinates
