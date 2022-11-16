@@ -25,8 +25,8 @@ class ClickBox {
 	}
 
 	setColor() {
-    let colorindex = Math.floor (Math.random() * this.colors.length)
- 
+    let colorindex = Math.floor (Math.random() * this.colors.length);
+    let color = colors[colorindex];
 }
 
 	update(timeElapsed) {
