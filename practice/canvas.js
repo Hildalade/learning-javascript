@@ -27,7 +27,17 @@ class ClickBox {
 		this.color = this.colors[colorIndex];
 	}
 
+  amIClicked(x, y){
+    if(x < this.x) return false;
+    if(x > this.x + this.size) return false;
+    if(y < this.y) return false;
+    if(y > this.y + this.size) return false;
+    return true;
+  }
+
 	update(timeElapsed) {
+    if(this.isClicked) return;
+
 		this.lastRefresh += timeElapsed;
 
 		if (this.lastRefresh < this.refreshRate) return;
@@ -61,6 +71,18 @@ for (let row = 0; row < gridSize; row++) {
 		squares.push(box);
 	}
 }
+
+canvas.addEventListener("click", (e) => {
+  console.log(e.offsetX, e.offsetY);
+  
+  squares.forEach((b) => {
+      if(b.amIClicked(e.offsetX, e.offsetY)){
+          b.isclicked = true;
+      }
+  });
+  
+});
+
 
 let currentTime = 0;
 
