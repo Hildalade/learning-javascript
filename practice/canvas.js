@@ -57,7 +57,7 @@ class ClickBox {
 		context.fill();
     if(this.isClicked){
       context.strokeStyle = "black";
-      context.stroke;
+      context.stroke();
     }
     context.closePath();
     // context.fillRect(this.x, this.y, this.size, this.size);
@@ -105,10 +105,10 @@ function drawLoop(timestamp) {
 		b.draw();
 	});
   
-  let isGameOver = squares.filter(b => b.isclicked == false).length == 0;
-
+  let isGameOver = squares.filter((b) => b.isClicked == false).length == 0;
+  console.log(isGameOver);
   if (isGameOver){
-    score = squares.filter(b => b.color == winningcolor).length;
+    score = squares.filter((b) => b.color == winningcolor).length;
   }
   else{
     requestAnimationFrame(drawLoop);
