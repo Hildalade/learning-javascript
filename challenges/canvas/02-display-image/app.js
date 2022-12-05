@@ -18,8 +18,7 @@ const context = canvas.getContext("2d");
 	matters!  You can learn more about getElementById here:
 	https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementById
 */
-
-// Add your new variable here, using the document.getElementById() method.
+ let canvas = document.getElementById("canvas");
 
 /* 
 	Once you have a variable that points to your HTML image, you can now
@@ -32,8 +31,7 @@ const context = canvas.getContext("2d");
 	variable is an HTMLImageElement.
 */
 
-// Add some code here to call the drawImage method of the context variable
-// HINT: this will look something like context.drawImage(yourImageVariableName, 0, 0);
+	context.drawImage(canvas, 0, 0);
 
 /* 
 	The most basic form of the drawImage method takes 3 parameters:

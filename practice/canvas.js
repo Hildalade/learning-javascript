@@ -1,23 +1,23 @@
 //@ts-check
 /** @type {HTMLCanvasElement} */ //@ts-ignore
 let canvas = document.getElementById("canvas-1");
-canvas.width = 100;
-canvas.height = 100;
+canvas.width = 700;
+canvas.height = 700;
 
 /** @type {CanvasRenderingContext2D} */ //@ts-ignore
 let context = canvas.getContext("2d");
 
 class ClickBox {
 	constructor(x, y, size, colors) {
-		this.x = x + 2;
-		this.y = y + 2;
-		this.size = size - 4;
+		this.x = x;
+		this.y = y ;
+		this.size = size;
 
 		this.isClicked = false;
-		this.refreshRate = 500;
+		this.refreshRate = 5000;
 		this.lastRefresh = 0;
 		this.colors = colors;
-		this.color = "red";
+		this.color = "yellow";
 
 		this.setColor();
 	}
@@ -52,12 +52,14 @@ class ClickBox {
 		// square.rect(x, y, size, size);
 
     context.beginPath();
-    context.rect (this.x, this.y, this.size, this.size);
+	context.arc(this.x + this.size / 2, this.y + this.size / 2, this.size / 2, 0, Math.PI*2)
 		context.fillStyle = this.color;
 		context.fill();
     if(this.isClicked){
-      context.strokeStyle = "black";
-      context.stroke();
+	  context.clearRect(this.x, this.y, this.size, this.size);
+	  context.rect (this.x, this.y, this.size, this.size);
+	    context.fillStyle = this.color;
+		context.fill();
     }
     context.closePath();
     // context.fillRect(this.x, this.y, this.size, this.size);
